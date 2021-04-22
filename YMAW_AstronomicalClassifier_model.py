@@ -31,8 +31,8 @@ class NeuralNetwork(nn.Module):
 
 class AstronomicalClassifier:
   def __init__(self):
-    self.train_data = pd.read_csv('/gdrive/MyDrive/PLAsTiCC-2018/training_set.csv')
-    self.train_metadata = pd.read_csv('/gdrive/MyDrive/PLAsTiCC-2018/training_set_metadata.csv')
+    self.train_data = pd.read_csv('reduced_train_data.csv')
+    self.train_metadata = pd.read_csv('reduced_train_metadata.csv')
 
     self.aggs = {'mjd'                   : ['min', 'max', 'size'],
                  'flux'                  : ['min', 'max', 'mean', 'median', 'std', 'skew'],
